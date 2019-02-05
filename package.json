@@ -9,6 +9,13 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  },
   "devDependencies": {
     "electron": "^4.0.4"
   }
