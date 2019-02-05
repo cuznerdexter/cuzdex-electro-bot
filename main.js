@@ -2,10 +2,21 @@ require('dotenv').config();
 const APIAI_TOKEN = process.env.APIAI_TOKEN;
 const APIAI_SESSION_ID = process.env.APIAI_SESSION_ID;
 
+const path = require('path');
+const fs = require('fs');
+const https = require('https');
+const certOptions = {
+    key: fs.readFileSync(path.resolve('cert/server.key')),
+    cert: fs.readFileSync(path.resolve('cert/server.crt'))
+  }
+const server = https.createServer(certOptions);
+
 const { app, BrowserWindow } = require('electron');
-const server = require('http').createServer();
 const io = require('socket.io')(server);
 const apiai = require('apiai')(APIAI_TOKEN);
+
+
+
 
 
 function createWindow () {

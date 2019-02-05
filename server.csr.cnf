@@ -1,0 +1,14 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+C=GB
+ST=London
+L=London
+O=RandomOrganization
+OU=RandomOrganizationUnit
+emailAddress=cuznerdexter@gmail.com
+CN = Localdev
